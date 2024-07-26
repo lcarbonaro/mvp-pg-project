@@ -1,9 +1,8 @@
 import axiosInstance from "../axiosInstance";
 
-
 export const getAllItems = async () => {
   try {
-    const response = await axiosInstance.get('/menu');
+    const response = await axiosInstance.get('/api/menu');
     return response.data;
   } catch (error) {
     console.error("There was an error fetching the items!", error);
@@ -13,7 +12,7 @@ export const getAllItems = async () => {
 
 export const getItemById = async (id) => {
   try {
-    const response = await axiosInstance.get(`/menu/${id}`);
+    const response = await axiosInstance.get(`/api/menu/${id}`);
     return response.data;
   } catch (error) {
     console.error(`There was an error fetching the item with id ${id}!`, error);
