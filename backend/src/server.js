@@ -23,3 +23,5 @@ app.use('/api/menu', menuRouter)
 app.use('/api/user', userRouter)
 
 app.listen(PORT, () => {console.log(`Listening on port ${PORT}`)})
+
+module.exports = app
