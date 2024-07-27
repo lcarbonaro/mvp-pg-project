@@ -11,9 +11,8 @@ app.use(express.json());
 const allowedOrigins = [
   process.env.FRONTEND_URL,
   'http://localhost:5173',
-  'https://miaspizza-o6cire6fb-prettygenius-projects.vercel.app'
+  'https://miaspizza-nzz4exr02-prettygenius-projects.vercel.app'
 ];
-
 // CORS configuration
 app.use(cors({
   credentials: true,
