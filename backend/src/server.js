@@ -30,6 +30,12 @@ app.use('/api/user', userRouter);
 
 app.get('/api/test', (req, res) => {
   res.json({ message: 'Backend is working!' });
+  console.log("Backend is working!");
+});
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 export default app;
