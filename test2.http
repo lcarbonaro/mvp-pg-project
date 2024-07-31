@@ -1,0 +1,17 @@
+###
+
+POST https://mvp-backend-ten.vercel.app/api/user/register
+Content-Type: application/json
+
+{"name":"les","email":"lcc@lcc.com", "password":"lccpassword","address":"123 blue street"}
+
+
+
+###
+
+POST https://mvp-backend-ten.vercel.app/api/user/login
+Content-Type: application/json
+
+{"email":"lcc@lcc.com", "password":"lccpassword"}
+
+###
