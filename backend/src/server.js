@@ -18,6 +18,8 @@ const allowedOrigins = [
   'http://localhost:5173',
   'https://miaspizza-nzz4exr02-prettygenius-projects.vercel.app'
 ];
+
+// commented this out to allow all origins for testing purposes (LCC)
 // CORS configuration
 /*
 app.use(cors({
@@ -32,6 +34,7 @@ app.use(cors({
 }));
 */
 
+// added this instead of above (LCC)
 app.use(cors());
 
 app.use('/api/menu', menuRouter);
@@ -41,9 +44,11 @@ app.get('/api/test', (req, res) => {
   res.json({ message: 'Backend is working!' });
 });
 
+// un-commented this (LCC)
 const port = 3000;
   app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+/**/
 
-//export default app;
+//export default app;   // commented this out (LCC)

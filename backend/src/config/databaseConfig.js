@@ -1,13 +1,17 @@
-  import {connect,set} from "mongoose";
-  import mongoose from "mongoose";
-  import {UserModel} from "../models/userModel.js";
-  import MenuModel from "../models/menuModel.js";
-  import { featuredProducts } from "../data.js";
-  import { sampleUsers } from "../data.js";
-  import bcrypt from 'bcryptjs';
-  
-  import dotenv from "dotenv";
-  dotenv.config();
+import {connect,set} from "mongoose";
+import mongoose from "mongoose";
+import {UserModel} from "../models/userModel.js";
+import MenuModel from "../models/menuModel.js";
+import { featuredProducts } from "../data.js";
+import { sampleUsers } from "../data.js";
+import bcrypt from 'bcryptjs';
+
+// added this to read in .env file (LCC)
+// also added .env file right under backend folder
+// to hold db connection string
+import dotenv from "dotenv";
+dotenv.config();
+/**/
  
 //hash database
 const PASSWORD_HASH_SALT_ROUNDS = 10;
@@ -17,7 +21,7 @@ mongoose.set('strictQuery', true);
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI, {
+        await mongoose.connect(process.env.MONGODB_URI, {   // note that this requires .env file (LCC)
         
         });
         await seedUsers();
