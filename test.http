@@ -12,3 +12,17 @@ Content-Type: application/json
 
 {"email":"john@example.com", "password":"password123"}
 
+###
+GET https://mvp-backend-ten.vercel.app/api/test
+
+
+###
+GET https://mvp-backend-ten.vercel.app/api/menu
+
+
+###
+
+POST https://mvp-backend-ten.vercel.app/api/user/login
+Content-Type: application/json
+
+{"email":"john@example.com", "password":"password123"}
