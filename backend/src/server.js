@@ -3,7 +3,12 @@ import cors from 'cors';
 import menuRouter from './routes/menuRouter.js';
 import userRouter from './routes/userRouter.js';
 
+import { connectDB } from './config/databaseConfig.js';
+
+
 const app = express();
+
+connectDB();
 
 app.use(express.json());
 
@@ -14,6 +19,7 @@ const allowedOrigins = [
   'https://miaspizza-nzz4exr02-prettygenius-projects.vercel.app'
 ];
 // CORS configuration
+/*
 app.use(cors({
   credentials: true,
   origin: function (origin, callback) {
@@ -24,6 +30,9 @@ app.use(cors({
     }
   }
 }));
+*/
+
+app.use(cors());
 
 app.use('/api/menu', menuRouter);
 app.use('/api/user', userRouter);
@@ -32,9 +41,9 @@ app.get('/api/test', (req, res) => {
   res.json({ message: 'Backend is working!' });
 });
 
-// const port = 3000;
-// app.listen(port, () => {
-//   console.log(`Server is running on port ${port}`);
-// });
+const port = 3000;
+  app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
-export default app;
+//export default app;

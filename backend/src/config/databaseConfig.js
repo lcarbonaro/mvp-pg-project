@@ -5,9 +5,11 @@
   import { featuredProducts } from "../data.js";
   import { sampleUsers } from "../data.js";
   import bcrypt from 'bcryptjs';
-
+  
+  import dotenv from "dotenv";
+  dotenv.config();
  
- //hash database
+//hash database
 const PASSWORD_HASH_SALT_ROUNDS = 10;
 
 //use models strictly
