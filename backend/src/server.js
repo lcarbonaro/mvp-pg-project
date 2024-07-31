@@ -3,12 +3,16 @@ import cors from 'cors';
 import menuRouter from './routes/menuRouter.js';
 import userRouter from './routes/userRouter.js';
 
+// added this to bring in the connectDB function (LCC)
 import { connectDB } from './config/databaseConfig.js';
+/**/
 
 
 const app = express();
 
+// added this to connect to the db (LCC)
 connectDB();
+/**/
 
 app.use(express.json());
 
